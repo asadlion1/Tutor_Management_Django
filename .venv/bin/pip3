@@ -1,4 +1,4 @@
-#!/Users/mohammedasad/Desktop/AsadMurad.com/projects/backend/Tutor_Management_Django/.venv/bin/python
+#!/Users/mohammedasad/Desktop/AsadMurad.com/projects/Tutor_Management_Django/.venv/bin/python3.13
 # -*- coding: utf-8 -*-
 import re
 import sys
