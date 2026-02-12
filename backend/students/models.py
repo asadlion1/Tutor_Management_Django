@@ -43,7 +43,9 @@ class StudentSchedule(models.Model):
     )
     start_time = models.TimeField()
     end_time = models.TimeField()
-    days = models.TextChoices(choices=Day)
+    days = models.TextChoices(choices=DaysOfWeek)
+
+    
 
 
 
