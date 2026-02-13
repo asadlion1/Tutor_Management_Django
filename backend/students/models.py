@@ -29,6 +29,11 @@ class Student(models.Model):
     date_of_birth = models.DateField()
     enrollment_date = models.DateField()
 
+    # School information on the student
+    school = models.CharField()
+    grade = models.IntegerField()
+    courses = models.CharField() # Gotta figure out what this one is
+
     # See if student is active or not 
     is_active = models.TextField(choices=Activity)
 
@@ -44,12 +49,3 @@ class StudentSchedule(models.Model):
     start_time = models.TimeField()
     end_time = models.TimeField()
     days = models.TextChoices(choices=DaysOfWeek)
-
-    
-
-
-
-    
-    
-    
-    
