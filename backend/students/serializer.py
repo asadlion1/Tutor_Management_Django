@@ -7,9 +7,14 @@ class ParentSerialzer(serializers.Serializer):
         model = Student
         fields = [
             "student_name",
-            ""
-
-
-
+            "enrollment_date",
+            "school",
+            "grade",
+            "courses",
+            "is_active"
+        ]
+        
+        hidden_fields = [
+            "date_of_birth"
         ]
 
