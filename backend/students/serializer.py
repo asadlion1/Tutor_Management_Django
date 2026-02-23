@@ -15,7 +15,9 @@ class StudentSerialzer(serializers.Serializer):
         model = Student
         fields = [
             "student_name",
-            
+            ""
+
+
 
         ]
 
