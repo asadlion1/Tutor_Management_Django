@@ -1,6 +1,6 @@
 # backend/guradian/models.py
 from django.db import models
-from backend.students.models import Student
+from students.models import Student
 
 
 
