@@ -4,7 +4,7 @@ from students.models import Student
 
 
 
-class Guardian(models.Model):
+class Parent(models.Model):
     """
     Docstring for Guardian
     This class is for the parents of students, when they sign up as their inforation is needed 
@@ -24,7 +24,8 @@ class Guardian(models.Model):
     signup_date = models.DateField(blank=False)
 
     # For logging and data 
-    created_at = models.DateField()
+    created_at = models.DateField(auto_created=True)
+    updated_at = models.DateField(auto_created=True)
 
 
 
