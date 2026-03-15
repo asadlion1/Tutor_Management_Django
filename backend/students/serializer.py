@@ -13,15 +13,8 @@ class StudentSerialzer(serializers.ModelSerializer):
         model = Student
         fields = [
             "student_name",
-<<<<<<< HEAD
-            
-=======
-            "enrollment_date",
-            
-
-
->>>>>>> e98c4b5 (Working on the serializer)
-
+            "school",
+            "courses",
         ]
 
 
