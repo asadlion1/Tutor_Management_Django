@@ -19,3 +19,22 @@ class StudentSerialzer(serializers.ModelSerializer):
 
 
 
+
+class StudentCreateSerializer(serializers.Serializer):
+    name = serializers.CharField(max_length=50)
+    date_of_birth = serializers.DateField()
+    enrollment_date = serializers.DateField()
+    school = serializers.CharField(max_length=100)
+    grade = serializers.IntegerField()
+
+
+
+    def validate_grade(self, grade):
+
+        if not (grade < 1 or grade > 12):
+            raise serializers.ValidationError(
+                "Grade cannot be grader than 12 or less than 1"
+            )
+        
+        
+        return grade 
