@@ -8,7 +8,7 @@ In Serializers, we need to differentiate between what we send (POST) and recive(
 """
 
 
-class StudentSerialzer(serializers.ModelSerializer):
+class StudentReadSerialzer(serializers.ModelSerializer):
     class Meta:
         model = Student
         fields = [
