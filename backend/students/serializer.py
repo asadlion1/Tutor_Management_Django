@@ -35,6 +35,6 @@ class StudentCreateSerializer(serializers.Serializer):
             raise serializers.ValidationError(
                 "Grade cannot be grader than 12 or less than 1"
             )
-        
-        
+            
         return grade 
+    
