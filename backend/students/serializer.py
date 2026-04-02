@@ -35,6 +35,18 @@ class StudentCreateSerializer(serializers.Serializer):
             raise serializers.ValidationError(
                 "Grade cannot be grader than 12 or less than 1"
             )
-        
-        
+
         return grade 
+    
+
+    def validate_date_of_birth(self, date_of_birth):
+        pass
+
+
+
+
+
+
+
+def _validate__parsing(self, date_of_birth) -> bool:
+    pass
