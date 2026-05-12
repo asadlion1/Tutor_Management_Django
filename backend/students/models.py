@@ -35,7 +35,7 @@ class Student(models.Model):
     parent = models.ForeignKey(
         Parent,
         on_delete=models.CASCADE,
-        related_name="Student"
+        related_name="students"
         
     )
 
@@ -57,13 +57,9 @@ class Student(models.Model):
     )
 
     # See if student is active or not 
-    is_active = models.CharField(
-        max_length=8,
-        choices=Activity.choices,
-        default=Activity.ACTIVE
-    )
+    is_active = models.BooleanField(default=True)
     
-    created_at = models.DateTimeField(auto_now=True)
+    created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
     

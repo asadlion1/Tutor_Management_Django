@@ -1,3 +1,4 @@
+# backend/students/serializer.py
 from rest_framework import serializers
 from backend.students.models import Student
 
@@ -8,7 +9,7 @@ In Serializers, we need to differentiate between what we send (POST) and recive(
 """
 
 
-class StudentSerialzer(serializers.ModelSerializer):
+class StudentReadSerialzer(serializers.ModelSerializer):
     class Meta:
         model = Student
         fields = [
@@ -21,7 +22,7 @@ class StudentSerialzer(serializers.ModelSerializer):
 
 
 class StudentCreateSerializer(serializers.Serializer):
-    name = serializers.CharField(max_length=50)
+    student_name = serializers.CharField(max_length=50)
     date_of_birth = serializers.DateField()
     enrollment_date = serializers.DateField()
     school = serializers.CharField(max_length=100)
@@ -31,22 +32,10 @@ class StudentCreateSerializer(serializers.Serializer):
 
     def validate_grade(self, grade):
 
-        if not (grade < 1 or grade > 12):
+        if grade < 1 or grade > 12:
             raise serializers.ValidationError(
                 "Grade cannot be grader than 12 or less than 1"
             )
-
+        
+        
         return grade 
-    
-
-    def validate_date_of_birth(self, date_of_birth):
-        pass
-
-
-
-
-
-
-
-def _validate__parsing(self, date_of_birth) -> bool:
-    pass
