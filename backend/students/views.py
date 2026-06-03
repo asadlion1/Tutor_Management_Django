@@ -1,4 +1,13 @@
-# backend/students/views.py
-from django.shortcuts import render
+# backend/students/views.py 
+from rest_framework.views import APIView
+from .models import Student
 
-# Create your views here.
+
+class StudentReadView(APIView):
+    pass 
+
+
+class StudentWriteView(APIView):
+    pass
+
+
