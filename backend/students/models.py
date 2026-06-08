@@ -82,6 +82,7 @@ class StudentSchedule(models.Model):
         )
     
     
+    
     class Meta:
         constraints = [
             models.UniqueConstraint(
